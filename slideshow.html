@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>slideshow</title>
+</head>
+
+<body>
+    <section>
+        <img src="pic1.jpg" style="height: 500px;" class="slideshow">
+
+        <img src="pic3.jpg" style="height: 500px;" class="slideshow">
+
+        <img src="pic4.jpg" style="height: 500px;" class="slideshow">
+
+        <img src="pic5.jpg" style="height: 500px;" class="slideshow">
+
+        <img src="pic6.jpg" style="height: 500px;" class="slideshow">
+
+        <img src="pic7.jpg" style="height: 500px;" class="slideshow">
+
+        <img src="pic8.jpeg" style="height: 500px;" class="slideshow">
+
+        <img src="pic9.jpg" style="height: 500px;" class="slideshow">
+
+        <img src="pic10.jpg" style="height: 500px;" class="slideshow">
+    </section>
+
+    <script>
+        var my_index = 0;
+        slide();
+        function slide() {
+            var i;
+            var x = document.getElementsByClassName("slideshow");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            my_index++;
+            if (my_index > x.length) { my_index = 1 }
+            x[my_index - 1].style.display = "block";
+            setTimeout(slide, 3000);
+        }
+    </script>
+</body>
+
+</html>
